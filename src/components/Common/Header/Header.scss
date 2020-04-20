@@ -1,0 +1,28 @@
+.header{
+    background: blue;
+    padding: 10px;
+    border: 3px solid white;
+}
+.cart-icon , .search-icon{
+    color: white;
+    background: blue;
+    border: none;
+    font-size: 25px;
+}
+.logo-icon {
+    background: blue;
+    border: none;
+    color: yellow;
+    font-size: 30px;
+}
+.search-icon-slt {
+    position: absolute;
+    right: 75px;
+    top: 29px;
+}
+@media(max-width:450px){
+    .search-box-mb{
+        position: absolute;
+        right: 70px;
+    }
+}

@@ -1,0 +1,41 @@
+.sort-by-block{
+    list-style: none;
+    display: flex;
+}
+.sort-by-block li{
+    margin-right: 6%;
+    cursor: pointer;
+}
+.sort-by-title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -4px;
+    cursor: default !important;
+}
+.sort-by-block-slt{
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+.sort-mb-btn-rt{
+    border-left: 1px solid darkgray !important;
+    text-transform: capitalize !important;
+    font-size: 18px !important;
+    color: darkblue !important;
+    font-weight: bold !important;
+    width: 50%;
+    margin: 0 auto !important;
+}
+.sort-mb-btn-lt{
+    text-transform: capitalize !important;
+    font-size: 18px !important;
+    color: darkblue !important;
+    font-weight: bold !important;
+    width: 50%;
+    margin: 0 auto !important;
+}
+.sort-mb-btn{
+    border: 1px solid darkgray;
+} 
+.sort-mb-title{
+    font-weight: bold !important;
+}   
