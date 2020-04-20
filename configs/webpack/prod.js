@@ -8,7 +8,7 @@ module.exports = merge(commonConfig, {
   mode: 'production',
   entry: './index.tsx',
   output: {
-    filename: 'venkatraja007.github.io/democart/js/bundle.[hash].min.js',
+    filename: 'democart/js/bundle.[hash].min.js',
     path: resolve(__dirname, '../../dist'),
     publicPath: '/',
   },
