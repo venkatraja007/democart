@@ -1,4 +1,5 @@
 {
+  "homepage": "http://venkatraja007.github.io/democart",
   "name": "shopping-cart",
   "version": "0.1.0",
   "description": "Shopping Cart.",
@@ -9,14 +10,14 @@
     "npm": "6.12.1"
   },
   "scripts": {
-    "build-prod": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
+    "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
     "start": "npm run start-dev",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev.js",
     "start-prod": "npm run build && node express.js",
     "test": "jest --coverage --watchAll --config=configs/jest.json",
-    "build:prod": "NODE_ENV=production webpack -p --config=configs/webpack/prod.js",
-    "postinstall": "npm run build:prod"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     
