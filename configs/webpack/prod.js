@@ -8,7 +8,7 @@ module.exports = merge(commonConfig, {
   mode: 'production',
   entry: './index.tsx',
   output: {
-    filename: 'domain.com/js/bundle.[hash].min.js',
+    filename: 'democart410.herokuapp.com/js/bundle.[hash].min.js',
     path: resolve(__dirname, '../../dist'),
     publicPath: '/',
   },

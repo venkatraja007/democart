@@ -41,8 +41,7 @@ module.exports = {
   plugins: [
     new CheckerPlugin(),
     new HtmlWebpackPlugin({
-      template: 'index.html.ejs',
-      favicon: "./../src/assets/img/icon.png"
+      template: 'index.html.ejs'
     }),
   ],
   externals: {

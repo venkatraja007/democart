@@ -5,19 +5,23 @@
   "author": "Admin",
   "private": true,
   "scripts": {
-    "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
-    "build-qa": "npm run clean-dist && webpack -p --config=configs/webpack/qa.js",
-    "build-pp": "npm run clean-dist && webpack -p --config=configs/webpack/pp.js",
+    "build-prod": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
-    "lint": "tslint './src/**/*.ts*' --format stylish --project . --force",
     "start": "npm run start-dev",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev.js",
-    "start-qa": "npm run build-qa && node express.js",
-    "start-pp": "npm run build-pp && node express.js",
     "start-prod": "npm run build && node express.js",
-    "test": "jest --coverage --watchAll --config=configs/jest.json"
+    "test": "jest --coverage --watchAll --config=configs/jest.json",
+    "build:prod": "NODE_ENV=production webpack -p --config=configs/webpack/prod.js",
+    "postinstall": "npm run build:prod"
   },
   "devDependencies": {
+    
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
@@ -75,11 +79,5 @@
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.28",
-    "@fortawesome/free-solid-svg-icons": "^5.13.0",
-    "@fortawesome/react-fontawesome": "^0.1.9"
   }
 }
