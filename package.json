@@ -4,6 +4,10 @@
   "description": "Shopping Cart.",
   "author": "Admin",
   "private": true,
+  "engines": {
+    "node": "v12.13.1",
+    "npm": "6.12.1"
+  },
   "scripts": {
     "build-prod": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
