@@ -10,9 +10,9 @@
     "npm": "6.12.1"
   },
   "scripts": {
-    "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
+    "build-prd": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
-    "start": "npm run start-dev",
+    "build": "npm run start-dev",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev.js",
     "start-prod": "npm run build && node express.js",
     "test": "jest --coverage --watchAll --config=configs/jest.json",
